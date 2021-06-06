@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Append On Mousemove | Javascript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<!--------------	svg name	------------------>
+
+	<div class="logo">
+		<div class="star">
+			<img src="IMAGE/star.png" alt="">
+		</div>
+			<div class="main-logo">
+	
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 151.31 111.05">
+					<defs>
+						<style>
+							.cls-1{
+								font-size:60px;
+								stroke:#fff;
+								stroke-width:0.9px;
+								font-family:FreestyleScript-Regular, Freestyle Script;
+								}
+						</style>
+					</defs>
+					<title>Asset 1</title>
+					<g id="Layer_2" data-name="Layer 2">
+						<g id="Layer_1-2" class="word" data-name="Layer 1">
+							<text class="cls-1"  transform="translate(3.97 79.28)">Seema</text>
+						</g>
+					</g>
+				</svg>
+				<h2>I love you</h2>
+			</div>
+		</div>
+
+	<!--------------	svg name	------------------>
+
+  <script type="text/javascript">
+  	document.addEventListener("mousemove", function(e){
+  		var body = document.querySelector('body');
+  		var heart = document.createElement("span");
+  		var x = e.offsetX;
+  		var y = e.offsetY;
+  		heart.style.left = x+'px';
+  		heart.style.top = y+'px';
+  		var size = Math.random() * 100;
+  		heart.style.width = 20 + size+'px';
+  		heart.style.height = 20 + size+'px';
+  		body.appendChild(heart);
+
+      setTimeout(function(){
+        heart.remove();
+      },2000)
+  	})
+  </script>
+</body>
+</html>
